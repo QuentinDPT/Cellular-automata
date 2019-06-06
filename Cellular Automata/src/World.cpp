@@ -25,7 +25,7 @@ void World::evolve(unsigned int generation){
     for(unsigned int j = 0 ; j<m_length ; j++ ){
         // Application of the rule
 
-        this(i,j) ;
+        //this(i,j) ;
     }
 
     evolve(generation-1) ;

@@ -16,15 +16,51 @@
 					<Add directory="src" />
 				</Compiler>
 			</Target>
+			<Target title="Cell2D">
+				<Option output="Cellular Automata" prefix_auto="1" extension_auto="1" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add directory="src" />
+				</Compiler>
+			</Target>
+			<Target title="Cell1D">
+				<Option output="Cellular Automata" prefix_auto="1" extension_auto="1" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-std=c++11" />
+					<Add directory="src" />
+				</Compiler>
+			</Target>
 		</Build>
 		<Compiler>
 			<Add option="-Wall" />
+			<Add option="-std=c++11" />
 			<Add option="-fexceptions" />
 		</Compiler>
-		<Unit filename="main.cpp" />
+		<Unit filename="main.cellular1D.cpp">
+			<Option target="Cell1D" />
+		</Unit>
+		<Unit filename="main.cellular2D.cpp">
+			<Option target="Cell2D" />
+		</Unit>
+		<Unit filename="main.cpp">
+			<Option target="Main" />
+		</Unit>
+		<Unit filename="src/Cell1D.cpp">
+			<Option target="Cell1D" />
+		</Unit>
+		<Unit filename="src/Cell1D.hpp">
+			<Option target="Cell1D" />
+		</Unit>
+		<Unit filename="src/Cell2D.cpp">
+			<Option target="Cell2D" />
+		</Unit>
+		<Unit filename="src/Cell2D.hpp">
+			<Option target="Cell2D" />
+		</Unit>
 		<Unit filename="src/Rule.hpp" />
-		<Unit filename="src/World.cpp" />
-		<Unit filename="src/World.hpp" />
 		<Extensions>
 			<code_completion />
 			<envvars />
